@@ -16,24 +16,24 @@ import java.util.*;
  */
 public class DecimalPosition {
     public static void main(String[] args) {
-        int[] array = {1, 2, 5, -21, 22, 11, 55, -101, 42, 8, 7, 32};
+        Integer[] array = {1, 2, 5, -21, 22, 11, 55, -101, 42, 8, 7, 32};
 
         // 使用自定义的比较器对数组进行排序
-//        Arrays.sort(array, new Comparator<Integer>() {
-//            @Override
-//            public int compare(Integer num1, Integer num2) {
-//                // 获取元素去除符号位后的十进制最低位
-//                int lastDigit1 = Math.abs(num1) % 10;
-//                int lastDigit2 = Math.abs(num2) % 10;
-//
-//                // 按照十进制最低位从小到大排序
-//                if (lastDigit1 != lastDigit2) {
-//                    return Integer.compare(lastDigit1, lastDigit2);
-//                } else {
-//                    return 0; // 相同最低位，保持相对位置不变
-//                }
-//            }
-//        });
+        Arrays.sort(array, new Comparator<Integer>() {
+            @Override
+            public int compare(Integer num1, Integer num2) {
+                // 获取元素去除符号位后的十进制最低位
+                int lastDigit1 = Math.abs(num1) % 10;
+                int lastDigit2 = Math.abs(num2) % 10;
+
+                // 按照十进制最低位从小到大排序
+                if (lastDigit1 != lastDigit2) {
+                    return Integer.compare(lastDigit1, lastDigit2);
+                } else {
+                    return 0; // 相同最低位，保持相对位置不变
+                }
+            }
+        });
 
         // 输出排序后的数组
         for (int num : array) {

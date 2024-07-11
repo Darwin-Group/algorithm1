@@ -26,7 +26,7 @@ import java.util.*;
  * 取第一个数组第 1 个元素与第二个数组第 0 个元素组成 1 对元素[1,1];
  * 求和为 1+1+1+1=4，为满足要求的最小和
  */
-public class PriorityQueue {
+public class AnotherPriorityQueue {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
